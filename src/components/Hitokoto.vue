@@ -41,14 +41,14 @@ const openMusicShow = ref(false);
 // 一言数据
 const hitokotoData = reactive({
   text: "这里应该显示一句话",
-  from: "無名",
+  from: "深度团队",
 });
 
 // 获取一言数据
 const getHitokotoData = async () => {
   try {
     const result = await getHitokoto();
-    hitokotoData.text = result.hitokoto;
+    hitokotoData.text = result.text;
     hitokotoData.from = result.from;
   } catch (error) {
     ElMessage({
@@ -59,7 +59,7 @@ const getHitokotoData = async () => {
       }),
     });
     hitokotoData.text = "这里应该显示一句话";
-    hitokotoData.from = "無名";
+    hitokotoData.from = "深度团队";
   }
 };
 

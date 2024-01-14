@@ -4,10 +4,10 @@
     <!-- Logo -->
     <div class="logo">
       <img class="logo-img" :src="siteLogo" alt="logo" />
-      <div :class="{ name: true, 'text-hidden': true, long: siteUrl[0].length >= 6 }">
+      <!--div :class="{ name: true, 'text-hidden': true, long: siteUrl[0].length >= 6 }">
         <span class="bg">{{ siteUrl[0] }}</span>
         <span class="sm">.{{ siteUrl[1] }}</span>
-      </div>
+      </div-->
     </div>
     <!-- 简介 -->
     <div class="description cards" @click="changeBox">
@@ -94,8 +94,8 @@ watch(
     animation: fade 0.5s;
     max-width: 460px;
     .logo-img {
-      border-radius: 50%;
-      width: 120px;
+      /*border-radius: 50%;*/
+      width: 100%;
     }
     .name {
       width: 100%;
